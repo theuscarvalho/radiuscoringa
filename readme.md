@@ -1,13 +1,21 @@
 # Radius Coringa
 
-Configure um novo radius server com as configurações:
--  SERVICE: PPP
--  IP: 167.172.106.53
--  Protocol: UDP
--  SECRET: testing123
--  AUTH PORTA: 1812
--  ACCT PORTA: 1813
+Configure um novo servidor RADIUS com as seguintes configurações:
 
-Deixando-o dessa forma: 
+  - Serviço: PPP
+  - Endereço IP: 167.172.106.53
+  - Protocolo: UDP
+  - Secret: testing123
+  - Porta de Autenticação: 1812
+  - Porta de Contabilização: 1813
+
+Conforme a imagem abaixo:
 
 ![Descrição da Imagem](https://github.com/theuscarvalho/radiuscoringa/blob/main/imagens/radius_server.png)
+
+- Ou copie e cole o seguinte script no terminal para executar todo o procedimento necessário:
+
+/radius
+add address=167.172.106.53 comment="***RADIUS-CORINGA" secret=testing123
+/tool netwatch
+add disabled=no down-script="/radius enable  [find comment=\"***RADIUS-CORINGA\"];" host=172.31.255.2 up-script="/radius disable [find comment=\"***RADIUS-CORINGA\"];"
