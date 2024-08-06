@@ -8,4 +8,5 @@ Configure um novo radius server com as configurações:
 -  AUTH PORTA: 1812
 -  ACCT PORTA: 1813
 
-
+Deixando-o dessa forma: 
+![Descrição da Imagem](URL-da-Imagem)
