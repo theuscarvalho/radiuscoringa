@@ -21,4 +21,4 @@ Conforme a imagem abaixo:
 ###### /radius
 ###### add address=167.172.106.53 comment="***RADIUS-CORINGA" secret=testing123;
 ###### /tool netwatch
-######## add disabled=no down-script="/radius enable  [find comment=\"***RADIUS-CORINGA\"];" host=172.31.255.2 up-script="/radius disable [find comment=\"***RADIUS-CORINGA\"];";
+###### add disabled=no down-script="/radius enable  [find comment=\"***RADIUS-CORINGA\"];" host=172.31.255.2 up-script="/radius disable [find comment=\"***RADIUS-CORINGA\"];";
